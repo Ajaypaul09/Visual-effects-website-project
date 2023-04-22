@@ -1,0 +1,52 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <style>
+
+    h1 {
+    color: maroon;
+    margin-left: 40px;
+        }
+
+     div {
+  width: 300px;
+  border: 15px solid beige;
+  padding: 40px;
+  margin: 20px;
+}
+    </style>
+
+    <h1>Get amazing animations you wish</h1>
+    {% load static %}
+<img src="/static/animations/sample.jpg" alt="error" height="30px" width="50px"/>
+
+    <br>
+    <div class="row">
+        {% for animation in animations %}
+         <div class="col">
+            <div class="card" style="width:30rem;">
+                {% load static %}
+                 <img  class="card-img-top" src="{{animation.image_url}}"  alt="no image found">
+                <div class="card-body">
+                    <h5 class="card-title">{{animation.name}}</h5>
+                    <p class="card-text">{{animation.price}}</p>
+                    <a href="#" class="btn btn-primary">purchase</a>
+                </div>
+            </div>
+         </div>
+      <!-- <img src="sample.jpg" alt="image error keeps happening">-->
+
+        {% endfor %}
+     </div>
+    <section>
+        <aside>
+        </aside>
+    </section>
+
+{% endblock %}
+
+<footer>
+
+
+</footer>

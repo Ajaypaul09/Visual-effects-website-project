@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="/static/animations/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="/static/animations/css/stylelog.css">
+
+
+
+     <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="#" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/animations/css/bootstrap.min.css" />
+    <!-- Pogo Slider CSS -->
+    <link rel="stylesheet" href="/static/animations/css/pogo-slider.min.css" />
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="/static/animations/css/style.css" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/static/animations/css/responsive.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/animations/css/custom.css" />
+</head>
+<body>
+
+
+ <header class="top-header">
+        <nav class="navbar header-nav navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="/static/animations/img/LOGO.jpg"  height="40px" width="100px"  alt="image"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                    <ul class="navbar-nav">
+                        <li><a class="nav-link active" href="index.html">Home</a></li>
+                        <li><a class="nav-link" href="about.html">Aboutus</a></li>
+                        <li><a class="nav-link" href="services.html">Services</a></li>
+                      <!--  <li><a class="nav-link" href="#">Blog</a></li>-->
+						<li><a class="nav-link" href="contact.html">Contact us</a></li>
+                        <li><a class="nav-link active" style="background:#f2184f;color:#fff;" href="register.html">Sign up</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h1 style="text-align:center;"><b>REGISTER</b></h1>
+                        <br>
+
+                        <h2 class="form-title" style="font-size:13px;font-family:cursive;"> <i> Fill the details so we could provide services</i> </h2>
+                        <form action = "{% url 'register' %}"  method="POST" class="register-form" id="register-form">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name" id="name" placeholder="Your Name" required data-error="Please enter your number"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" name="email" id="email" placeholder="Your Email" required data-error="Please enter your number" />
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="password" id="pass" placeholder="give your date of birth as password" required data-error="Please enter your number"/>
+                            </div>
+
+
+
+                            <div class="form-group">
+                            <!--    <label for="pass"><i class="zmdi zmdi-lock-outline"></i></label>-->
+                                <input type="number" name="number" id="re_pass" placeholder="your number" required data-error="Please enter your number"/>
+                            </div>
+                           
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="submit"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="/static/animations/images/signup-image.jpg" alt="sing up image"></figure>
+                       <!-- <a href="login.html" class="signup-image-link">I am already member</a>-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sing in  Form -->
+
+
+    </div>
+
+
+        <!-- Start Footer -->
+    <footer class="footer-box" >
+        <div class="container"style="background-color:black;" >
+            <div class="row">
+                <div class="col-md-12 margin-bottom_30"><br>
+				   <img src="/static/animations/img/LOGO.jpg" height="20px" width="90px"  alt="image" alt="#" />
+				</div>
+               <div class="col-xl-6 white_fonts">
+                    <div class="row">
+					<div class="col-md-12 white_fonts margin-bottom_30">
+					   <h3>Contact Us</h3>
+					</div>
+                        <div class="col-md-4">
+                            <div class="full icon">
+                                <img src="/static/animations/images/social1.png">
+                            </div>
+                            <div class="full white_fonts">
+                                 <p>Angamaly,
+                                    <br>Ernakulam,
+                                    <br>Kerala,
+                                    <br>India.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="full icon">
+                                <img src="/static/animations/images/social2.png">
+                            </div>
+                            <div class="full white_fonts">
+                                <p>ourfirm99@gmail.com
+                                    <br>paulajay707@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="full icon">
+                                <img src="/static/animations/images/social3.png">
+                            </div>
+                            <div class="full white_fonts">
+                                <p>9496004151
+                                    <br>9496959293</p>
+                            </div>
+                        </div>
+						<div class="col-md-12">
+						   <ul class="full social_icon margin-top_20">
+                               <li><a href="https://www.facebook.com/ourfirm.angamaly.1/"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.instagram.com/ourfirm_angamaly/?hl=en"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://in.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.google.com/account/about/"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+						</div>
+                    </div>
+                </div>
+
+				 <div class="col-xl-6 white_fonts">
+				    <div class="row">
+					   <div class="col-md-6">
+					     <div class="footer_blog footer_menu">
+						    <h3>Menus</h3>
+						    <ul>
+							  <li><a href="index.html">Home</a></li>
+							  <li><a href="about.html">About Us</a></li>
+							  <li><a href="services.html">Services</a></li>
+							  <li><a href="#">Blog</a></li>
+							  <li><a href="contact.html">Contact us</a></li>
+							</ul>
+						 </div>
+
+					   </div>
+
+					</div>
+				 </div>
+
+            </div>
+
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <div class="footer_bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="crp">© 2020. All Rights Reserved.</p>
+                    <ul class="bottom_menu">
+                        <li><a href="#">Term of Service</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="/static/animations/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/animations/js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+
+</html>
